@@ -1,29 +1,32 @@
-# ORIGINAL PROMPT
+# Welcome to the Reservation Scheduler. 
 
-Build a simple service to help users make reservations to go to a fancy melon tasting.
+The general goal of this project is to build a simple service to help users make reservations to go to a fancy melon tasting. More information can be found in this repo's wiki.
 
-A user should be able to “log in” (by entering their username, password optional), pick a date, choose an optional time range, and then be shown all the available reservations that meet the criteria.
+# Database Structure
 
-There should also be a page which shows all reservations for a given user.	
+Two PostgreSQL Tables, Users and Reservations hold the data regarding users and scheduled reservations.
 
-Reservation rules:
-* each must start and end on the hour or half hour
-* each must last exactly 30 minutes long
-* a user can only have one reservation on a calendar date
-* only one reservation can be made for any given time slot
-* time slots are all day, every day - the melon tasting room is always open.
+```mermaid
+erDiagram
 
-If a user tries to violate the reservation rules, they should receive an error specific message.
+USERS {
+    int user_ID PK
+    string user_name
+    string password
+}
 
-The application needs the following pages:
-- Simple login screen (no authentication required)
-- Page to search for appointments
-- Results page to view the results of the appointment search (allowing users to book appointments)
-- Page to view all the scheduled appointments for the current user (optional: build in appointment editing/canceling)
+RESERVATIONS {
+    int reservation_ID PK
+    int user_ID FK
+    int year
+    int month
+    int day
+    int hour
+    int minute
+    string status
+}
 
-# Goal of Current Iteration
-
-* Implement Local Server
+USERS ||--|{ RESERVATIONS: One_to_Many
 
 
-
+```
