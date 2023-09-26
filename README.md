@@ -21,3 +21,9 @@ The application needs the following pages:
 - Results page to view the results of the appointment search (allowing users to book appointments)
 - Page to view all the scheduled appointments for the current user (optional: build in appointment editing/canceling)
 
+# Goal of Current Iteration
+
+* Implement Local Server
+
+
+
