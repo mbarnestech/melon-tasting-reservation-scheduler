@@ -4,7 +4,7 @@ The general goal of this project is to build a simple service to help users make
 
 # Database Structure
 
-Two PostgreSQL Tables, Users and Reservations hold the data regarding users and scheduled reservations.
+Two PostgreSQL Tables, Users and Reservations, hold the data regarding users and scheduled reservations.
 
 ```mermaid
 erDiagram
