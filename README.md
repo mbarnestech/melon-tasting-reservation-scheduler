@@ -10,20 +10,16 @@ Two PostgreSQL Tables, Users and Reservations, hold the data regarding users and
 erDiagram
 
 USERS {
-    int user_ID PK
-    string user_name
-    string password
+    Integer user_id PK
+    String user_name
+    String password
 }
 
 RESERVATIONS {
-    int reservation_ID PK
-    int user_ID FK
-    int year
-    int month
-    int day
-    int hour
-    int minute
-    string status
+    Integer reservation_id PK
+    Integer user_id FK
+    DateTime appointment
+    String status
 }
 
 USERS ||--|{ RESERVATIONS: One_to_Many

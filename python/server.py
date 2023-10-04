@@ -1,8 +1,8 @@
-
 # import Python modules
 from dotenv import load_dotenv
 from flask import Flask
 from os import environ
+
 #---------------------------------------------------------------------#
 
 # create Flask app
